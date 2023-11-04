@@ -1,3 +1,5 @@
+import {GoodsSimple} from "../interface";
+
 const goods: GoodsSimple[] = [
     {
         id: 1,

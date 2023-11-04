@@ -1,3 +1,5 @@
+import {MessageListItem} from "../interface";
+
 const messages: MessageListItem[] = [
     {
         id: 1,

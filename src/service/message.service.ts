@@ -1,6 +1,7 @@
 import {Config, Provide} from '@midwayjs/core';
 import {sleep} from '../utils/Sleep';
 import messages from '../db/messages';
+import {MessageListItem} from "../interface";
 
 @Provide()
 export class MessageService {

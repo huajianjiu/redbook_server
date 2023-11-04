@@ -1,6 +1,7 @@
 import {Config, Provide} from '@midwayjs/core';
 import {sleep} from '../utils/Sleep';
 import articles from "../db/articles";
+import {Article, ArticleComment} from "../interface";
 
 @Provide()
 export class ArticleService {

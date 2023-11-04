@@ -1,9 +1,13 @@
-import {Controller, Get} from '@midwayjs/core';
+import {Controller, Get, Query, Inject} from '@midwayjs/core';
+import {HomeService} from "../service/home.service";
 
-@Controller('/')
+@Controller('/home')
 export class HomeController {
-  @Get('/')
-  async home(): Promise<string> {
-    return 'Hello Midwayjs!';
-  }
+    @Inject()
+    homeService: HomeService
+
+    @Get('/homeList')
+    async home(@Query("page") page: string, @Query("size") size: string) {
+        return await this.homeService.getHomeList(parseInt(page), parseInt(size));
+    }
 }

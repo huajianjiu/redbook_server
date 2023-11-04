@@ -1,3 +1,5 @@
+import {Article} from "../interface";
+
 const articles: Article[] = [
     // article 1
     {
